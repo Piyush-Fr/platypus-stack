@@ -109,7 +109,7 @@ export default function Footer() {
               Email us
             </span>
             <a
-              href="mailto:hello@platypusstack.io"
+              href="mailto:platypusstack@gmail.com"
               className="font-bold transition-colors duration-200"
               style={{
                 fontFamily: "var(--font-display)",
@@ -119,7 +119,7 @@ export default function Footer() {
               onMouseEnter={e => ((e.target as HTMLAnchorElement).style.color = "#E8FF58")}
               onMouseLeave={e => ((e.target as HTMLAnchorElement).style.color = "#EDEDED")}
             >
-              hello@platypusstack.io
+              platypusstack@gmail.com
             </a>
           </div>
 
