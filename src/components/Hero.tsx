@@ -63,7 +63,6 @@ export default function Hero() {
           <div className="hero-divider divider mb-8" />
           <div className="flex items-center justify-between mb-14">
             <span className="section-label">01 — Intro</span>
-            <span className="section-label">Est. 2024 · Remote Agency</span>
           </div>
         </div>
 
