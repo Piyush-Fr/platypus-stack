@@ -55,8 +55,8 @@ export default function Hero() {
 
       {/* Content */}
       <div
-        style={{ maxWidth: 1440, flex: 1 }}
-        className="mx-auto px-8 w-full flex flex-col justify-between py-16"
+        style={{ maxWidth: 1440, flex: 1, padding: "64px 32px", margin: "0 auto", width: "100%" }}
+        className="flex flex-col justify-between"
       >
         {/* Label row */}
         <div>

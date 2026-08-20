@@ -10,7 +10,7 @@ if (typeof window !== "undefined") gsap.registerPlugin(ScrollTrigger);
 import { Vortex } from "./ui/vortex";
 
 const MANIFESTO =
-  "For twelve years we've helped serious organisations feel alive on screen — calm on the surface, a little obsessive underneath.";
+  "Four minds, one vision: we design bold experiences, build powerful systems, and transform ambitious ideas into beautiful, intuitive digital products that matter.";
 
 export default function Manifesto() {
   const containerRef = useRef<HTMLElement>(null);
@@ -34,7 +34,7 @@ export default function Manifesto() {
         }
       );
     },
-    { scope: containerRef }
+    { scope: containerRef, dependencies: [MANIFESTO] }
   );
 
   return (
@@ -93,7 +93,7 @@ export default function Manifesto() {
         >
           {MANIFESTO.split(" ").map((word, i, arr) => (
             <React.Fragment key={i}>
-              <span className="manifesto-word inline-block">{word}</span>
+              <span className="manifesto-word inline-block opacity-10">{word}</span>
               {i < arr.length - 1 && " "}
             </React.Fragment>
           ))}

@@ -155,7 +155,7 @@ export default function Footer() {
               color: "#333333",
             }}
           >
-            © {new Date().getFullYear()} Platypus Stack. All rights reserved.
+            © Platypus Stack. All rights reserved.
           </span>
           <span
             style={{

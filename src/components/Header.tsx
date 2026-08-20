@@ -18,10 +18,7 @@ export default function Header() {
   return (
     <header
       ref={headerRef}
-      className="fixed top-0 left-0 w-full z-50 rounded-none"
-      style={{
-        background: "#0A0A0A",
-      }}
+      className="fixed top-0 left-0 w-full z-50 rounded-none bg-[#0A0A0A]/60 backdrop-blur-md border-b border-[#1E1E1E]"
     >
       <div
         style={{ maxWidth: 1440 }}

@@ -9,8 +9,6 @@ export default function Preloader() {
   const containerRef = useRef<HTMLDivElement>(null);
   const fillRef = useRef<HTMLDivElement>(null);
   const logoContainerRef = useRef<HTMLDivElement>(null);
-  const topCurtainRef = useRef<HTMLDivElement>(null);
-  const bottomCurtainRef = useRef<HTMLDivElement>(null);
   const [isComplete, setIsComplete] = useState(false);
 
   useEffect(() => {
@@ -45,17 +43,12 @@ export default function Preloader() {
       duration: 0.4,
       ease: "power2.inOut"
     }, "+=0.2")
-    // 3. Open the horizontal curtains (top goes up, bottom goes down)
-    .to(topCurtainRef.current, {
-      yPercent: -100,
-      duration: 1.2,
-      ease: "power4.inOut"
-    }, "open")
-    .to(bottomCurtainRef.current, {
-      yPercent: 100,
-      duration: 1.2,
-      ease: "power4.inOut"
-    }, "open");
+    // 3. Fade out the entire preloader
+    .to(containerRef.current, {
+      opacity: 0,
+      duration: 0.8,
+      ease: "power2.inOut"
+    });
 
   }, { scope: containerRef });
 
@@ -64,53 +57,38 @@ export default function Preloader() {
   return (
     <div
       ref={containerRef}
-      className="fixed inset-0 z-[9999] pointer-events-auto"
+      className="fixed inset-0 z-[9999] pointer-events-auto flex items-center justify-center"
+      style={{ background: "#0A0A0A" }}
     >
-      {/* Top Half Curtain */}
-      <div 
-        ref={topCurtainRef}
-        className="absolute top-0 left-0 w-full h-[50vh] origin-top"
-        style={{ background: "#0A0A0A" }}
-      />
-      
-      {/* Bottom Half Curtain */}
-      <div 
-        ref={bottomCurtainRef}
-        className="absolute bottom-0 left-0 w-full h-[50vh] origin-bottom border-t border-[#1a1a1a]"
-        style={{ background: "#0A0A0A" }}
-      />
-
       {/* Logo Fill Animation */}
       <div 
         ref={logoContainerRef}
-        className="absolute inset-0 flex items-center justify-center pointer-events-none"
+        className="relative w-32 h-32 md:w-40 md:h-40 pointer-events-none"
       >
-        <div className="relative w-32 h-32 md:w-40 md:h-40">
-          {/* Dimmed background logo */}
-          <div className="absolute inset-0 opacity-20">
-            <Image
-              src="/platypus.png"
-              alt="Loading..."
-              fill
-              className="object-contain"
-              priority
-            />
-          </div>
-          
-          {/* Filled foreground logo */}
-          <div 
-            ref={fillRef}
-            className="absolute inset-0"
-            style={{ clipPath: "inset(100% 0 0 0)" }}
-          >
-            <Image
-              src="/platypus.png"
-              alt="Loading..."
-              fill
-              className="object-contain"
-              priority
-            />
-          </div>
+        {/* Dimmed background logo */}
+        <div className="absolute inset-0 opacity-20">
+          <Image
+            src="/platypus.png"
+            alt="Loading..."
+            fill
+            className="object-contain"
+            priority
+          />
+        </div>
+        
+        {/* Filled foreground logo */}
+        <div 
+          ref={fillRef}
+          className="absolute inset-0"
+          style={{ clipPath: "inset(100% 0 0 0)" }}
+        >
+          <Image
+            src="/platypus.png"
+            alt="Loading..."
+            fill
+            className="object-contain"
+            priority
+          />
         </div>
       </div>
     </div>

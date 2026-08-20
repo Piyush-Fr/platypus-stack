@@ -63,8 +63,9 @@ export const Vortex = (props: VortexProps) => {
   useEffect(() => {
     setup();
     window.addEventListener("resize", () => {
-      canvasRef.current &&
+      if (canvasRef.current && containerRef.current) {
         resize(canvasRef.current, containerRef.current);
+      }
     });
     return () => {
       window.removeEventListener("resize", () => {});

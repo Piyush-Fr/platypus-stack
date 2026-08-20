@@ -16,26 +16,15 @@ const services = [
     desc: "Design systems built to last — proper component libraries with clear token hierarchies. Everything stays clean and scalable as content grows.",
   },
   {
-    num: "MO-03",
-    title: "Motion & Interaction",
-    desc: "GSAP scroll choreography, Lenis smooth scroll, and micro-interactions that serve a purpose. If an animation isn't guiding the user, it doesn't make the cut.",
+    num: "PF-03",
+    title: "Portfolio Buildup",
+    desc: "Crafting digital portfolios that speak for themselves. We structure your work to highlight your best capabilities.",
   },
   {
-    num: "AD-04",
-    title: "Art Direction",
-    desc: "The taste layer — typography, image direction, and grid layouts that make the brand feel like itself on every device.",
+    num: "SD-04",
+    title: "System Design",
+    desc: "Architecting robust technical foundations and scalable architectures that can support your product as it grows.",
   },
-];
-
-const technologies = [
-  "Next.js 16",
-  "React 19",
-  "Tailwind CSS v4",
-  "GSAP",
-  "Lenis Scroll",
-  "TypeScript",
-  "Node.js",
-  "WebGL",
 ];
 
 export default function Capabilities() {
@@ -57,14 +46,6 @@ export default function Capabilities() {
         {
           opacity: 1, y: 0, duration: 0.8, stagger: 0.1, ease: "power3.out",
           scrollTrigger: { trigger: ".services-list", start: "top 76%" },
-        }
-      );
-      gsap.fromTo(
-        ".tech-item",
-        { opacity: 0, y: 12 },
-        {
-          opacity: 1, y: 0, duration: 0.5, stagger: 0.04, ease: "power2.out",
-          scrollTrigger: { trigger: ".tech-list", start: "top 85%" },
         }
       );
     },
@@ -91,7 +72,7 @@ export default function Capabilities() {
               color: "#EDEDED",
             }}
           >
-            Our Creative Engine
+            Our Strength
           </h2>
         </div>
 
@@ -132,23 +113,6 @@ export default function Capabilities() {
             </div>
           ))}
         </div>
-
-        {/* Tech stack */}
-        <div className="mt-20">
-          <span className="section-label block mb-6">Core Tech Stack</span>
-          <div className="tech-list flex flex-wrap gap-2">
-            {technologies.map((tech, i) => (
-              <span
-                key={i}
-                className="tech-item px-4 py-2 border border-[#1E1E1E] font-bold uppercase tracking-widest text-[10px] hover:border-[#E8FF58] hover:text-[#E8FF58] transition-all duration-200 cursor-default"
-                style={{ fontFamily: "var(--font-display)", color: "#555555" }}
-              >
-                {tech}
-              </span>
-            ))}
-          </div>
-        </div>
-
       </div>
     </section>
   );
