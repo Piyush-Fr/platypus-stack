@@ -68,7 +68,7 @@ export default function Preloader() {
         {/* Dimmed background logo */}
         <div className="absolute inset-0 opacity-20">
           <Image
-            src="/platypus.png"
+            src="/logo.png"
             alt="Loading..."
             fill
             className="object-contain"
@@ -83,7 +83,7 @@ export default function Preloader() {
           style={{ clipPath: "inset(100% 0 0 0)" }}
         >
           <Image
-            src="/platypus.png"
+            src="/logo.png"
             alt="Loading..."
             fill
             className="object-contain"

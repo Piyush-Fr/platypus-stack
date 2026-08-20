@@ -31,7 +31,7 @@ export default function Header() {
         <div className="flex-1 flex justify-center pointer-events-auto">
           <Link href="/" className="w-9 h-9 relative flex items-center justify-center hover:scale-105 transition-transform duration-300">
             <Image
-              src="/platypus.png"
+              src="/logo.png"
               alt="Platypus logo"
               width={36}
               height={36}

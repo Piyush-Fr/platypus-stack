@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description:
     "A four-person creative studio building high-end websites, portfolios, and design systems. We engineer fast, beautiful digital experiences.",
   icons: {
-    icon: "/platypus.png",
+    icon: "/logo.png",
   },
   openGraph: {
     title: "PLATYPUS",
