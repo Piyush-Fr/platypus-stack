@@ -3,11 +3,14 @@ import "./globals.css";
 import LenisProvider from "@/components/providers/LenisProvider";
 
 export const metadata: Metadata = {
-  title: "Platypus Stack — Web Design & Development Agency",
+  title: "PLATYPUS",
   description:
     "A four-person creative studio building high-end websites, portfolios, and design systems. We engineer fast, beautiful digital experiences.",
+  icons: {
+    icon: "/platypus.png",
+  },
   openGraph: {
-    title: "Platypus Stack — Web Design & Development Agency",
+    title: "PLATYPUS",
     description: "A four-person creative studio building high-end websites, portfolios, and design systems.",
     type: "website",
   },
