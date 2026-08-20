@@ -58,10 +58,7 @@ export default function Footer() {
           >
             {/* Vignette/Shadow overlay to fade the edges */}
             <div 
-              className="absolute inset-0 z-0 pointer-events-none" 
-              style={{ 
-                boxShadow: "inset 0 0 120px 80px #0a0a0a",
-              }} 
+              className="absolute inset-0 z-0 pointer-events-none shadow-[inset_0_0_60px_40px_#0a0a0a] md:shadow-[inset_0_0_120px_80px_#0a0a0a]"
             />
             
             <div className="relative z-10 mix-blend-difference text-white w-full py-16">
